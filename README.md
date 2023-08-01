@@ -1,7 +1,7 @@
 # CloudFlare Smasher
 
 Working implementation of this 3rd patch for undetect_chromedriver (single python file):
-https://github.com/digitalnomad91/udetect_coudflare_working_patch/edit/main/README.md
+https://github.com/digitalnomad91/udetect_coudflare_working_patch/
 
 Here is the latest version of flaresolverr with this fix implemented: 
 https://github.com/Dexcelerate/FlareSolverr-udetect-patch/ 
