@@ -1,0 +1,60 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "CloudFlare Crusher",
+    "default_popup": "window.html",
+    "default_icon": {
+      "19": "icons/window19.png",
+      "38": "icons/window38.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "find",
+    "pageCapture",
+    "tabs",
+    "scripting",
+    "notifications",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequest",
+    "dns",
+    "webRequest",
+    "windows",
+    "storage",
+    "webRequestFilterResponse",
+    "background.service_worker",
+    "https://api.ipify.org/*",
+    "https://yourproxyurl.com/*",
+    "http://www.google.com/",
+    "https://discord.com/*",
+    "<all_urls>"
+],
+"content_security_policy": {
+  "extension_pages": "script-src 'self'; object-src 'none'"
+},
+"content_scripts": [
+  {
+    "matches": ["https://bscscan.com/contractsVerified"],
+    "js": ["page-eater.js"],
+    "run_at": "document_end"
+  }
+],
+"background": {
+  "scripts": ["background.js"]
+},
+"browser_specific_settings": {
+  "gecko": {
+    "id": "addon@example.com",
+    "strict_min_version": "103.0"
+  }
+},
+  "icons": {
+    "48": "icons/window.png",
+    "96": "icons/window@2x.png"
+  },
+  "description": "F*@& you CloudFlare!",
+  "homepage_url": "https://github.com/digitalnomad91/cloudflare-smasher",
+  "manifest_version": 3,
+  "name": "CloudFlare Smasher",
+  "version": "1.0"
+}

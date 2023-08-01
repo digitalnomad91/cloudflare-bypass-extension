@@ -1,0 +1,49 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "CloudFlare Crusher",
+    "default_popup": "window.html",
+    "default_icon": {
+      "19": "icons/window19.png",
+      "38": "icons/window38.png"
+    }
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "activeTab",
+    "proxy",
+    "find",
+    "pageCapture",
+    "tabs",
+    "scripting",
+    "notifications",
+    "webRequest",
+    "windows",
+    "storage",
+    "webRequestFilterResponse",
+    "pageCapture",
+    "background",
+    "<all_urls>"
+],
+
+"content_scripts": [
+  {
+    "matches": ["https://bscscan.com/contractsVerified"],
+    "js": ["page-eater.js"],
+    "run_at": "document_end"
+  }
+],
+"background": {
+  "scripts": ["background.js"],
+  "persistent": true
+},
+  "icons": {
+    "48": "icons/window.png",
+    "96": "icons/window@2x.png"
+  },
+  "description": "F*@& you CloudFlare!",
+  "homepage_url": "https://github.com/dexcelerate/cloudflare-smasher",
+  "manifest_version": 2,
+  "name": "CloudFlare Smasher",
+  "version": "1.0"
+}

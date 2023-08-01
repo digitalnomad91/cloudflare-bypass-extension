@@ -1,0 +1,34 @@
+{
+  "name": "cloudfldare-smasher",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Extension to get contents behind cloudflare wall & send it to an http server for serving up the contents to other processes. ",
+  "main": "build.js",
+  "scripts": {
+    "start": "node run webserver.js",
+    "build": "webpack --config webpack.config.cjs && node dist/index.js",
+    "test": "web-ext lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalnomad91/cloudflare-smasher.git"
+  },
+  "author": "https://github.com/digitalnomad91",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalnomad91/cloudflare-smasher/issues"
+  },
+  "homepage": "https://github.com/digitalnomad91/cloudflare-smasher#readme",
+  "dependencies": {
+    "@inquirer/select": "^1.2.5",
+    "git-rev-sync": "^3.0.2",
+    "vertx": "^0.0.1-security",
+    "web-ext": "^7.6.2",
+    "webpack": "^5.88.2",
+    "webpack-node-externals": "^3.0.0",
+    "whiptail": "^1.7.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
