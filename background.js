@@ -52,7 +52,7 @@ async function sendMessage(msg) {
         "title":"Extension IP: "+ip,
         "description":`Sent Page Contents to proxy and got response: ${JSON.stringify(msg)}`,
         ...error
-      }] //image: {url: "http://bsc-idx.dexcelerate.com/pepe-8bit-cry.gif",}
+      }] //image: {url: "http://abc.com/pepe-8bit-cry.gif",}
     }
 
     const rawResponse = await fetch(webhook_url, {
@@ -85,7 +85,7 @@ function runCode() {
 //Open up a new pinned tab with the page we want to get the contents of.
 async function openMyPage() {
    await chrome.tabs.create({
-     "url": "https://bscscan.com/contractsVerified",
+     "url": "https://someblockchainscannersite.com/contractsVerified",
      "pinned": true,
      //"active": false
    });
