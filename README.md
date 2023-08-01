@@ -90,6 +90,8 @@ https://github.com/digitalnomad91/udetect_coudflare_working_patch
 
 This same workaround implemented in the latest FlareSolverr:
 
+https://github.com/digitalnomad91/FlareSolverr-udetect-patch/
+
 -------------------------------------------------
 
 Original issue that started several weeks ago:
